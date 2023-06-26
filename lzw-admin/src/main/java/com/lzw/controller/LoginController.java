@@ -35,7 +35,7 @@ public class LoginController {
     private RoleService roleService;
 
     @PostMapping("/user/login")
-    // @SystemLog(businessName = "用户登录")
+    @SystemLog(businessName = "用户登录")
     public ResponseResult login(@RequestBody User user) {
         //判断参数是否合法
         if (!StringUtils.hasText(user.getUserName())) {
